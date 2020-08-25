@@ -16,10 +16,10 @@ class ProfileController extends Controller
     public function index()
     {
         //
-        $profiles = DB::table('profiles')->simplePaginate(5);
+        $employees = DB::table('employees')->simplePaginate(5);
         //$employee = DB::table('employees')->get();
 
-        $employees= Profile::with('employee')->get();
+        $profiles= Profile::with('employee')->get();
 
         return view('profile', ['profiles','profile' => $profiles,'employee'=>$employees]);
     }

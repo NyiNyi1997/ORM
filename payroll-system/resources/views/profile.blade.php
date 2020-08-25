@@ -60,7 +60,7 @@
                    
                         <tr>
                             <td><a href="{{url('/profile',$profile->id)}}">{{ $profile->id }}</td></a>
-                            <td>{{ $profile->employee_id}}</td>
+                            <td>{{ $profile->employee['name']}}</td>
                             <td>{{ $profile->age }}</td>
                             <td>{{ $profile->height }}</td>
                             <td>{{ $profile->father_name }}</td>
